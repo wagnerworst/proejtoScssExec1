@@ -1,3 +1,33 @@
-body{
-    background-color: aquamarine;
+@import "_collor";
+@import "_mixins";
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
 }
+body{
+    background-color: $verde;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    gap: 5vw;
+
+}
+.card{
+    display: flex;
+    @include mixin-card;
+}
+

@@ -9,7 +9,7 @@ function executarEcontrar()
     let listaFind = document.getElementById("listaFind").value
     let elemento = document.getElementById("elementoFind").value
     let arrayFind = listaFind.split(",")
-    let resultadoFind = arrayFind.find((element) => element === elemento) > 0 ? "Encontrado" : "Não Encontrado";
+    let resultadoFind = arrayFind.find((element) => element === elemento) > 0 ? "Encontrado!" : "Não Encontrado!";
 
     transformarBotaoEmAlert("buttonResultadoEncontrar",resultadoFind, 3000)
 }
