@@ -1,3 +1,9 @@
+import { 
+    transformarBotaoEmAlertFalha,
+    transformarBotaoEmAlertSucesso,
+    transformarBotaoEmOriginal
+} from './botoes'
+
 export async function transformarBotaoEmAlert(idBotaoHtml, textoAlterar, tempoTextoEmTela)
 {
     //Declaracao de variaveis para funcionamento
@@ -19,19 +25,4 @@ export async function transformarBotaoEmAlert(idBotaoHtml, textoAlterar, tempoTe
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function transformarBotaoEmAlertFalha(divBotao,textoAlterar){
-    divBotao.innerText = textoAlterar;
-    divBotao.style.backgroundColor = "#c04e4e"
-}
-
-function transformarBotaoEmAlertSucesso(divBotao,textoAlterar){
-    divBotao.innerText = textoAlterar;
-    divBotao.style.backgroundColor = "#8FBCB3"
-}
-
-function transformarBotaoEmOriginal(divBotaoVoltar){
-    divBotaoVoltar.innerText = "RESULTADO";
-    divBotaoVoltar.style.backgroundColor = "#FCE6A8";
 }
